@@ -58,4 +58,4 @@ colnames(allData) <- updated_colnames;
 # 5. Create Independent tidy data set with the average of each variable for each activity and each subject
 output_tidy_dataset = aggregate(X_combined, by=list(activity = allData$activityID, subject=allData$SubjectID), mean)
 
-write.table(output_tidy_dataset, "output_tidy_dataset.txt", sep="\t")
+write.table(output_tidy_dataset, "output_tidy_dataset.txt", row.names = FALSE, sep="\t")
